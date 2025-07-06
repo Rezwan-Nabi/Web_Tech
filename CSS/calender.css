@@ -1,0 +1,41 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+#calendar { 
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 5px;
+}
+.day { 
+    border: 1px solid #ccc; 
+    min-height: 80px; 
+    position: relative; 
+    padding: 5px;
+}
+.day .date {
+    font-size: 12px; 
+    color: #555; 
+    position: absolute; 
+    top: 2px; 
+    right: 4px;
+ }
+.event { 
+    background: #4CAF50; 
+    color: white; 
+    padding: 2px 4px; 
+    margin-top: 18px; 
+    font-size: 12px; 
+    border-radius: 3px; 
+    cursor: pointer;
+ }
+#eventDetails { 
+    margin-top: 20px;
+    padding: 10px; 
+    border: 1px solid #4CAF50; 
+    display: none;
+ }
+    
+ h3 { 
+    margin-top: 0;
+ }

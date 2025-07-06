@@ -1,0 +1,106 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.split-row {
+  display: flex;
+  gap: 10px;
+}
+
+.split-row div {
+  flex: 1;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.btn.small {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.alt-payment {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.apple-pay,
+.google-pay {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.apple-pay {
+  background: black;
+  color: white;
+}
+
+.google-pay {
+  background: #4285F4;
+  color: white;
+}
+
+.saved-cards ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.saved-cards li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.ticket-info {
+  margin-top: 15px;
+  font-size: 14px;
+  color: green;
+}

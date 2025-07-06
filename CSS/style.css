@@ -1,0 +1,269 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #004080;
+}
+
+
+a {
+  color: #0059b3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+.container, .contact-container, .promo-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.sidebar {
+  width: 200px;
+  background: #004080;
+  padding: 15px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px 0;
+  border-bottom: 1px solid #0066cc;
+  font-weight: normal;
+}
+
+.sidebar a:hover {
+  background-color: #0066cc;
+}
+
+
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+nav {
+  background-color: #004080;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+.top-right {
+  text-align: right;
+  margin: 15px 20px 30px 20px;
+}
+
+
+.notification-list ul {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.notification-list li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+
+.contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+
+.promo-container {
+  max-width: 700px;
+}
+
+.promo-card {
+  background-color: #e6f0ff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 80, 160, 0.3);
+}
+
+.promo-code {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #004080;
+}
+
+.promo-desc {
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+
+button {
+  background-color: #004080;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0066cc;
+}
+
+#refundForm {
+  margin-top: 15px;
+}
+
+#refundForm label {
+  font-weight: bold;
+}
+
+#refundForm select {
+  padding: 5px;
+  margin: 8px 0 15px 0;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+body > h1 {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+body > div {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+body > div h2 {
+  color: #003366;
+}
+
+body > div p {
+  margin: 5px 0;
+  font-size: 1.05em;
+}
+
+
+.container {
+  max-width: 700px;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.checkin-card {
+  background-color: #f0f8ff;
+  border: 1px solid #004080;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.checkin-card h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.checkin-card button {
+  margin-top: 10px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkin-card button[disabled] {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 20px;
+  width: 100%;
+}
