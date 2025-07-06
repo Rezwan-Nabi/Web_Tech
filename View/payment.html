@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Payment Checkout</title>
+  <link rel="stylesheet" href="..//design/payment.css" />
+</head>
+<body>
+
+  <h1>Checkout</h1>
+
+  <section class="checkout">
+    <h2>Payment Details</h2>
+
+    <label>Name on Card</label>
+    <input type="text" placeholder="Full Name">
+
+    <label>Card Number</label>
+    <input type="text" placeholder="1234 5678 9012 3456">
+
+    <div class="split-row">
+      <div>
+        <label>Expiry</label>
+        <input type="text" placeholder="MM/YY">
+      </div>
+      <div>
+        <label>CVV</label>
+        <input type="text" placeholder="123">
+      </div>
+    </div>
+
+    <label>
+      <input type="checkbox"> Split payment with another person
+    </label>
+
+    <button class="btn pay-btn">Pay Now</button>
+
+    <div class="alt-payment">
+      <p>Or use:</p>
+      <button class="apple-pay">Apple Pay</button>
+      <button class="google-pay">Google Pay</button>
+    </div>
+  </section>
+
+  <section class="saved-cards">
+    <h2>Saved Cards</h2>
+    <ul>
+      <li>**** **** **** 1234 <button class="btn small">Use</button></li>
+      <li>**** **** **** 9876 <button class="btn small">Use</button></li>
+    </ul>
+  </section>
+
+  <section class="invoice">
+    <h2>Invoice</h2>
+    <p><strong>Order ID:</strong> #EVT20250628</p>
+    <p><strong>Event:</strong> GreenTech Conference 2025</p>
+    <p><strong>Total:</strong> $149.00</p>
+    <button class="btn small">Download Invoice (PDF)</button>
+    <p class="ticket-info"> E-ticket will be sent instantly after payment.</p>
+  </section>
+
+</body>
+</html>

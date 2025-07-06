@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seat Selection</title>
+  <link rel="stylesheet" href="..//design/seat.css" />
+</head>
+<body>
+
+  <h1>Select Your Seat</h1>
+
+  
+  <div class="filters">
+    <label><input type="checkbox" id="chairFilter"> Show only accessible seats</label>
+  </div>
+
+  
+  <div id="venueMap" draggable="true" ondragstart="dragStart(event)">
+    <div class="seat" data-price="$25" title="Standard Seat - $25"></div>
+    <div class="seat" data-price="$35" title="Premium Seat - $35"></div>
+    <div class="seat chair" data-price="$25" title="chair Accessible - $25"></div>
+    <div class="seat" data-price="$25" title="Standard Seat - $25"></div>
+    <div class="seat chair" data-price="$25" title="chair Accessible - $25"></div>
+  </div>
+
+  <p id="infoBox">Hover over a seat to view price and features.</p>
+
+</body>
+<script>
+  const seats = document.querySelectorAll('.seat');
+  const filterCheckbox = document.getElementById('chairFilter');
+
+  
+  seats.forEach(seat => {
+    seat.addEventListener('mouseover', () => {
+      document.getElementById('infoBox').textContent = seat.title;
+    });
+    seat.addEventListener('mouseout', () => {
+      document.getElementById('infoBox').textContent = 'Hover over a seat to view price and features.';
+    });
+  });
+
+  
+  filterCheckbox.addEventListener('change', () => {
+    const showchairOnly = filterCheckbox.checked;
+    seats.forEach(seat => {
+      if (showchairOnly) {
+        seat.style.display = seat.classList.contains('chair') ? 'inline-block' : 'none';
+      } else {
+        seat.style.display = 'inline-block';
+      }
+    });
+  });
+
+  
+  let startX;
+  function dragStart(e) {
+    startX = e.clientX;
+    document.body.onmousemove = function (e) {
+      let angle = (e.clientX - startX) / 5;
+      document.getElementById('venueMap').style.transform = `rotateY(${angle}deg)`;
+    };
+    document.body.onmouseup = function () {
+      document.body.onmousemove = null;
+      document.body.onmouseup = null;
+    };
+  }
+</script>
+</html>

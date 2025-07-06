@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basic Event Calendar</title>
+  <link rel="stylesheet" href="..//design/calender.css" />
+</head>
+<body>
+
+<h2>Event Calendar - July 2025</h2>
+<div id="calendar"></div>
+
+<div id="eventDetails">
+  <h3 id="eventTitle"></h3>
+  <p id="eventDesc"></p>
+</div>
+
+<script>
+  
+  const events = [
+    { date: 5, title: "Music Concert", description: "An evening of classical music." },
+    { date: 12, title: "Tech Conference", description: "Latest trends in technology." },
+    { date: 20, title: "Art Exhibition", description: "Explore modern art." },
+    { date: 28, title: "Marathon", description: "City-wide running event." }
+  ];
+
+  const calendarEl = document.getElementById('calendar');
+  const daysInMonth = 31;
+
+  for (let i = 1; i <= daysInMonth; i++) {
+    const dayEl = document.createElement('div');
+    dayEl.className = 'day';
+    dayEl.innerHTML = `<div class="date">${i}</div>`;
+    
+    // Check for event
+    events.forEach(event => {
+      if (event.date === i) {
+        const eventEl = document.createElement('div');
+        eventEl.className = 'event';
+        eventEl.innerText = event.title;
+        eventEl.onclick = () => showEventDetails(event);
+        dayEl.appendChild(eventEl);
+      }
+    });
+    
+    calendarEl.appendChild(dayEl);
+  }
+
+  function showEventDetails(event) {
+    document.getElementById('eventTitle').innerText = event.title;
+    document.getElementById('eventDesc').innerText = event.description;
+    document.getElementById('eventDetails').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

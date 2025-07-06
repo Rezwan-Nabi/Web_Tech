@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendee Dashboard</title>
+  <link rel="stylesheet" href="..//design/attendee.css" />
+</head>
+<body>
+
+  <h1>Attendee List Dashboard</h1>
+
+  <div class="top-bar">
+    <div>
+      <button class="btn" onclick="exportCSV()">Export CSV</button>
+      <button class="btn" onclick="printBadges()">Print Badges</button>
+    </div>
+    <input type="text" id="search" placeholder="Search attendees..." onkeyup="searchAttendees()">
+  </div>
+
+  <table id="attendeeTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Company</th>
+        <th>Badge</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rezwan Nabi</td>
+        <td>rezwan@gmail.com</td>
+        <td>Healthy Tech</td>
+        <td><button onclick="generateBadge('Rezwan Nabi')">Generate</button></td>
+      </tr>
+      <tr>
+        <td>Shakil Khan</td>
+        <td>shakil@gmail.com</td>
+        <td>Green Events</td>
+        <td><button onclick="generateBadge('Shakil Khan')">Generate</button></td>
+      </tr>
+      <tr>
+        <td>Radia Oishi</td>
+        <td>oishi@gmail.com</td>
+        <td>Tech Solution</td>
+        <td><button onclick="generateBadge('Radia Oishi')">Generate</button></td>
+      </tr>
+      <tr>
+        <td>Tanvir Tanim</td>
+        <td>tanvir@gmail.com</td>
+        <td>Partex</td>
+        <td><button onclick="generateBadge('Tanvir Tanim')">Generate</button></td>
+      </tr>
+      <tr>
+        <td>Jannatul Ferdaus Eva</td>
+        <td>eva@gmail.com</td>
+        <td>Walton</td>
+        <td><button onclick="generateBadge('Jannatul Ferdaus Eva')">Generate</button></td>
+      </tr>
+      <tr>
+        <td>Rifat Khan</td>
+        <td>rifat@gmail.com</td>
+        <td>Bata</td>
+        <td><button onclick="generateBadge('Rifat Khan')">Generate</button></td>
+      </tr>
+
+      
+    </tbody>
+  </table>
+
+  <script>
+    function exportCSV() {
+      alert("CSV Export function triggered");
+      // to generate and download the CSV.
+    }
+
+    function printBadges() {
+      alert("Printing all badges...");
+      //  to badge generation screen.
+    }
+
+    function generateBadge(name) {
+      alert("Generating badge for " + name);
+      // Open badge preview or send to printer.
+    }
+
+    function searchAttendees() {
+      let input = document.getElementById("search").value.toLowerCase();
+      let rows = document.querySelectorAll("#attendeeTable tbody tr");
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(input) ? "" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>

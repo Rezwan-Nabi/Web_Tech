@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Types</title>
+  <link rel="stylesheet" href="..//design/ticket.css" />
+</head>
+<body>
+
+  <h1>Select Your Ticket</h1>
+
+  <!-- Ticket Tier Grid -->
+  <section class="ticket-grid">
+    <div class="ticket-card">
+      <h2>Standard</h2>
+      <p class="price">$49</p>
+      <ul>
+        <li>✔ Entry Pass</li>
+        <li>✖ Priority Seating</li>
+        <li>✖ Free Merch</li>
+      </ul>
+      <button class="btn">Choose Standard</button>
+    </div>
+
+    <div class="ticket-card">
+      <h2>VIP</h2>
+      <p class="price">$99</p>
+      <ul>
+        <li>✔ Entry Pass</li>
+        <li>✔ Front Row Seat</li>
+        <li>✔ Free T-Shirt</li>
+      </ul>
+      <button class="btn">Choose VIP</button>
+    </div>
+
+    <div class="ticket-card">
+      <h2>Group (4 People)</h2>
+      <p class="price">$179</p>
+      <ul>
+        <li>✔ Entry for 4</li>
+        <li>✔ Reserved Table</li>
+        <li>✔ 4x T-Shirts</li>
+      </ul>
+      <button class="btn">Choose Group</button>
+    </div>
+  </section>
+
+  <!-- Package Comparison -->
+  <section class="comparison-table">
+    <h2>Compare Packages</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Standard</th>
+          <th>VIP</th>
+          <th>Group</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Entry</td>
+          <td>✔</td>
+          <td>✔</td>
+          <td>✔ (x4)</td>
+        </tr>
+        <tr>
+          <td>Front Seat</td>
+          <td>✖</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Merchandise</td>
+          <td>✖</td>
+          <td>✔</td>
+          <td>✔ (x4)</td>
+        </tr>
+        <tr>
+          <td>Meet & Greet</td>
+          <td>Optional</td>
+          <td>Optional</td>
+          <td>Optional</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Upsell Prompts -->
+  <section class="upsell">
+    <h2>Want More?</h2>
+    <label>
+      <input type="checkbox"> Add Meet & Greet (+$20)
+    </label><br>
+    <label>
+      <input type="checkbox"> Add Backstage Tour (+$15)
+    </label><br>
+    <label>
+      <input type="checkbox"> Event Photo Package (+$10)
+    </label>
+  </section>
+
+  <button class="btn confirm">Proceed to Checkout</button>
+
+</body>
+</html>
